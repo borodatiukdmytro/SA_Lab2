@@ -6,21 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1393</width>
-    <height>712</height>
+    <width>1800</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form1</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(247, 224, 255);</string>
+   <string notr="true">background-color: rgb(214, 210, 195); color: white;</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="2" rowspan="5">
     <widget class="QTextBrowser" name="results_field">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(165, 192, 212);  color: black;</string>
      </property>
      <property name="lineWrapMode">
       <enum>QTextEdit::NoWrap</enum>
@@ -32,8 +32,8 @@
       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'.Menio Regular'; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'.Menio Regular'; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="placeholderText">
       <string>Results are shown here</string>
@@ -49,7 +49,7 @@ p, li { white-space: pre-wrap; }
       </sizepolicy>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(170, 170, 255);</string>
+      <string notr="true">background-color: rgb(201, 178, 48);</string>
      </property>
      <property name="title">
       <string>Dimensions</string>
@@ -68,7 +68,7 @@ p, li { white-space: pre-wrap; }
       <item row="0" column="1">
        <widget class="QSpinBox" name="x1_dim">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <property name="value">
          <number>3</number>
@@ -88,7 +88,7 @@ p, li { white-space: pre-wrap; }
       <item row="3" column="1">
        <widget class="QSpinBox" name="y_dim">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <property name="value">
          <number>2</number>
@@ -118,7 +118,7 @@ p, li { white-space: pre-wrap; }
       <item row="1" column="1">
        <widget class="QSpinBox" name="x2_dim">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);
+         <string notr="true">background-color: rgb(0, 0, 0);
 </string>
         </property>
         <property name="value">
@@ -129,7 +129,7 @@ p, li { white-space: pre-wrap; }
       <item row="2" column="1">
        <widget class="QSpinBox" name="x3_dim">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <property name="value">
          <number>2</number>
@@ -142,7 +142,7 @@ p, li { white-space: pre-wrap; }
    <item row="1" column="1">
     <widget class="QGroupBox" name="groupBox_4">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 140, 230);</string>
+      <string notr="true">background-color: rgb(89, 73, 48);</string>
      </property>
      <property name="title">
       <string>Degreees</string>
@@ -161,7 +161,7 @@ p, li { white-space: pre-wrap; }
       <item row="0" column="1">
        <widget class="QSpinBox" name="x1_deg">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <property name="value">
          <number>7</number>
@@ -181,7 +181,7 @@ p, li { white-space: pre-wrap; }
       <item row="2" column="1">
        <widget class="QSpinBox" name="x3_deg">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <property name="value">
          <number>4</number>
@@ -191,7 +191,7 @@ p, li { white-space: pre-wrap; }
       <item row="1" column="1">
        <widget class="QSpinBox" name="x2_deg">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <property name="value">
          <number>7</number>
@@ -214,10 +214,10 @@ p, li { white-space: pre-wrap; }
    <item row="0" column="0">
     <widget class="QGroupBox" name="groupBox">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(174, 92, 255);</string>
+      <string notr="true">background-color: rgb(12, 51, 179);</string>
      </property>
      <property name="title">
-      <string>Data</string>
+      <string>DATA</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_5">
       <item row="0" column="0">
@@ -226,7 +226,7 @@ p, li { white-space: pre-wrap; }
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(170, 85, 255);</string>
+         <string notr="true">background-color: rgb(75, 75, 94);</string>
         </property>
         <property name="text">
          <string>Samples:</string>
@@ -236,7 +236,7 @@ p, li { white-space: pre-wrap; }
       <item row="0" column="1">
        <widget class="QSpinBox" name="sample_spin">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <property name="maximum">
          <number>999</number>
@@ -249,7 +249,7 @@ p, li { white-space: pre-wrap; }
       <item row="1" column="0">
        <widget class="QLineEdit" name="line_input">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <property name="placeholderText">
          <string>Input file</string>
@@ -266,7 +266,7 @@ p, li { white-space: pre-wrap; }
       <item row="2" column="0">
        <widget class="QLineEdit" name="line_output">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <property name="placeholderText">
          <string>Output file</string>
@@ -286,7 +286,7 @@ p, li { white-space: pre-wrap; }
    <item row="1" column="0">
     <widget class="QGroupBox" name="groupBox_3">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 170, 255);</string>
+      <string notr="true">background-color: rgb(85, 171, 157);</string>
      </property>
      <property name="title">
       <string>Types of polynomials</string>
@@ -329,7 +329,7 @@ p, li { white-space: pre-wrap; }
    <item row="2" column="0">
     <widget class="QGroupBox" name="groupBox_7">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(188, 120, 255);</string>
+      <string notr="true">background-color: rgb(145, 107, 12);</string>
      </property>
      <property name="title">
       <string>Additional</string>
@@ -351,7 +351,7 @@ p, li { white-space: pre-wrap; }
       <item>
        <widget class="QComboBox" name="weights_box">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
+         <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <item>
          <property name="text">
@@ -378,7 +378,7 @@ p, li { white-space: pre-wrap; }
    <item row="3" column="0">
     <widget class="QGroupBox" name="groupBox_5">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(232, 98, 255);</string>
+      <string notr="true">background-color: rgb(168, 176, 56);</string>
      </property>
      <property name="title">
       <string>Polynomials</string>
@@ -393,10 +393,10 @@ p, li { white-space: pre-wrap; }
          <item>
           <widget class="QPushButton" name="exec_button">
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(170, 0, 255);</string>
+            <string notr="true">background-color: rgb(54, 10, 15);</string>
            </property>
            <property name="text">
-            <string>Generate</string>
+            <string>Calculate</string>
            </property>
            <property name="default">
             <bool>true</bool>
@@ -409,7 +409,7 @@ p, li { white-space: pre-wrap; }
          <item>
           <widget class="QPushButton" name="plot_button">
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(225, 71, 255);</string>
+            <string notr="true">background-color: rgb(209, 170, 42);</string>
            </property>
            <property name="text">
             <string>Plot</string>
