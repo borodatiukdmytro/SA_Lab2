@@ -4,6 +4,9 @@ from scipy import special
 from openpyxl import Workbook
 
 from lab_2.system_solve import *
+#для работы всего кода
+#from system_solve import *
+#для поиска степеней
 from tabulate import tabulate as tb
 
 

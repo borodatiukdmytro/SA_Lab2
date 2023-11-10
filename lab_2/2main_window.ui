@@ -6,21 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>1000</height>
+    <width>1800</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form1</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(214, 210, 195); color: white; font-size: 16pt;</string>
+   <string notr="true">background-color: rgb(214, 210, 195); color: white;</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
-    <item row="4" column="0">
+   <item row="0" column="2" rowspan="5">
     <widget class="QTextBrowser" name="results_field">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(165, 192, 212);  color: black; font-size: 16pt;</string>
+      <string notr="true">background-color: rgb(165, 192, 212);  color: black;</string>
      </property>
      <property name="lineWrapMode">
       <enum>QTextEdit::NoWrap</enum>
@@ -29,15 +29,25 @@
       <bool>true</bool>
      </property>
      <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt;&quot;&gt;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'.Menio Regular'; font-size:16pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'.Menio Regular'; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="placeholderText">
-      <string>Results:</string>
+      <string>Results are shown here</string>
      </property>
     </widget>
    </item>
    <item row="0" column="1">
     <widget class="QGroupBox" name="groupBox_2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(201, 178, 48);</string>
      </property>
@@ -61,7 +71,7 @@
          <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <property name="value">
-         <number>2</number>
+         <number>3</number>
         </property>
        </widget>
       </item>
@@ -81,7 +91,7 @@
          <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <property name="value">
-         <number>4</number>
+         <number>2</number>
         </property>
        </widget>
       </item>
@@ -112,7 +122,7 @@
 </string>
         </property>
         <property name="value">
-         <number>2</number>
+         <number>1</number>
         </property>
        </widget>
       </item>
@@ -122,7 +132,7 @@
          <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <property name="value">
-         <number>3</number>
+         <number>2</number>
         </property>
        </widget>
       </item>
@@ -135,7 +145,7 @@
       <string notr="true">background-color: rgb(89, 73, 48);</string>
      </property>
      <property name="title">
-      <string>Degrees</string>
+      <string>Degreees</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_4">
       <item row="0" column="0">
@@ -154,7 +164,7 @@
          <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <property name="value">
-         <number>1</number>
+         <number>7</number>
         </property>
        </widget>
       </item>
@@ -174,7 +184,7 @@
          <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <property name="value">
-         <number>14</number>
+         <number>4</number>
         </property>
        </widget>
       </item>
@@ -184,7 +194,7 @@
          <string notr="true">background-color: rgb(0, 0, 0);</string>
         </property>
         <property name="value">
-         <number>12</number>
+         <number>7</number>
         </property>
        </widget>
       </item>
@@ -198,18 +208,18 @@
         </property>
        </widget>
       </item>
-      </layout>
-      </widget>
-      </item>
-      <item row="0" column="0">
-      <widget class="QGroupBox" name="groupBox">
-            <property name="styleSheet">
-                  <string notr="true">background-color: rgb(12, 51, 179);</string>
-            </property>
-            <property name="title">
-                  <string>DATA</string>
-            </property>
-      <layout class="QGridLayout" name="gridLayout_5">
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(12, 51, 179);</string>
+     </property>
+     <property name="title">
+      <string>DATA</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
       <item row="0" column="0">
        <widget class="QLabel" name="label">
         <property name="enabled">
@@ -232,7 +242,7 @@
          <number>999</number>
         </property>
         <property name="value">
-         <number>45</number>
+         <number>50</number>
         </property>
        </widget>
       </item>
