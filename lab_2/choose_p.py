@@ -1,10 +1,10 @@
 from solve import *
 
-#a= Solve({'samples':45, 'input_file': 'data.txt', 'dimensions': [2, 2, 3, 4], 'output_file': '', 'degrees': [3, 3, 3],
-#     'lambda_multiblock': True, 'weights': 'normal', 'poly_type': 'hermit'})
-
-a= Solve({'samples': 50, 'input_file': 'data_own.txt', 'dimensions': [3, 1, 2, 2], 'output_file': '', 'degrees': [3, 3, 3],
+a= Solve({'samples':45, 'input_file': 'data.txt', 'dimensions': [2, 2, 3, 4], 'output_file': '', 'degrees': [3, 3, 3],
      'lambda_multiblock': True, 'weights': 'normal', 'poly_type': 'chebyshev'})
+
+#a= Solve({'samples': 50, 'input_file': 'data_own.txt', 'dimensions': [3, 1, 2, 2], 'output_file': '', 'degrees': [3, 3, 3],
+#     'lambda_multiblock': True, 'weights': 'normal', 'poly_type': 'chebyshev'})
 a.define_data()
 a.norm_data()
 a.define_norm_vectors()

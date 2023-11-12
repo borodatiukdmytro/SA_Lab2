@@ -1,13 +1,30 @@
+import numpy as np
 from copy import deepcopy
 
 from scipy import special
 from openpyxl import Workbook
-
-from lab_2.system_solve import *
-#для работы всего кода
-#from system_solve import *
-#для поиска степеней
 from tabulate import tabulate as tb
+
+def conjugate_gradient_method(A, b, eps):
+    n = len(A.T) # number column
+    xi1 = xi = np.zeros(shape=(n,1), dtype = float)
+    vi = ri = b # start condition
+    i = 0 #loop for number iteration
+    while True:
+        try:
+            i+= 1
+            ai = float(vi.T*ri)/float(vi.T*A*vi) # alpha i
+            xi1 = xi+ai*vi # x i+1
+            ri1 = ri-ai*A*vi # r i+1
+            betai = -float(vi.T*A*ri1)/float(vi.T*A*vi) # beta i
+            vi1 = ri1+betai*vi
+            if (np.linalg.norm(ri1)<eps) or i > 10 * n:
+                break
+            else:
+                xi,vi,ri = xi1,vi1,ri1
+        except Exception:
+            print("problem with minimization")
+    return np.matrix(xi1)
 
 
 class Solve(object):
@@ -34,12 +51,6 @@ class Solve(object):
         self.degf = [sum(self.deg[:i + 1]) for i in range(len(self.deg))]
 
     def _minimize_equation(self, A, b, type='cjg'):
-        """
-        Finds such vector x that |Ax-b|->min.
-        :param A: Matrix A
-        :param b: Vector b
-        :return: Vector x
-        """
         if type == 'lsq':
             return np.linalg.lstsq(A,b)[0]
         elif type == 'cjg':

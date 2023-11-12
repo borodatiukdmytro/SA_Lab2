@@ -1,12 +1,71 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from os import name as os_name
+from numpy.polynomial import Polynomial as pm
 
 from lab_2.solve import Solve
-import lab_2.basis_generator as b_gen
-from lab_2.show_polynomial import _Polynom
+
+def basis_sh_chebyshev(degree):
+    basis = [pm([-1, 2]), pm([1])]
+    for i in range(degree):
+        basis.append(pm([-2, 4])*basis[-1] - basis[-2])
+    del basis[0]
+    return basis
 
 
+def basis_sh_legendre(degree):
+    basis = [pm([1])]
+    for i in range(degree):
+        if i == 0:
+            basis.append(pm([-1, 2]))
+            continue
+        basis.append((pm([-2*i - 1, 4*i + 2])*basis[-1] - i * basis[-2]) / (i + 1))
+    return basis
+
+
+def basis_hermite(degree):
+    basis = [pm([0]), pm([1])]
+    for i in range(degree):
+        basis.append(pm([0,2])*basis[-1] - 2 * i * basis[-2])
+    del basis[0]
+    return basis
+
+
+def basis_laguerre(degree):
+    basis = [pm([1])]
+    for i in range(degree):
+        if i == 0:
+            basis.append(pm([1, -1]))
+            continue
+        basis.append(pm([2*i + 1, -1])*basis[-1] - i * i * basis[-2])
+    return basis
+
+class _Polynom(object):
+    def __init__(self, ar, symbol = 'x',eps = 1e-15):
+        self.ar = ar
+        self.symbol = symbol
+        self.eps = eps
+
+    def __repr__(self):
+        #joinder[first, negative] = str
+        joiner = {
+            (True, True):'-',
+            (True, False): '',
+            (False, True): ' - ',
+            (False, False): ' + '
+        }
+
+        result = []
+        for deg, coef in reversed(list(enumerate(self.ar))):
+            sign = joiner[not result, coef < 0]
+            coef  = abs(coef)
+            if coef == 1 and deg != 0:
+                coef = ''
+            if coef < self.eps:
+                continue
+            f = {0: '{}{}', 1: '{}{}'+self.symbol}.get(deg, '{}{}'+ self.symbol +'^{}')
+            result.append(f.format(sign, coef, deg))
+        return ''.join(result) or '0'
 
 class PolynomialBuilder(object):
     def __init__(self, solution):
@@ -15,16 +74,16 @@ class PolynomialBuilder(object):
         max_degree = max(solution.p) - 1
         if solution.poly_type == 'chebyshev':
             self.symbol = 'T'
-            self.basis = b_gen.basis_sh_chebyshev(max_degree)
+            self.basis = basis_sh_chebyshev(max_degree)
         elif solution.poly_type == 'legendre':
             self.symbol = 'P'
-            self.basis = b_gen.basis_sh_legendre(max_degree)
+            self.basis = basis_sh_legendre(max_degree)
         elif solution.poly_type == 'laguerre':
             self.symbol = 'L'
-            self.basis = b_gen.basis_laguerre(max_degree)
+            self.basis = basis_laguerre(max_degree)
         elif solution.poly_type == 'hermit':
             self.symbol = 'H'
-            self.basis = b_gen.basis_hermite(max_degree)
+            self.basis = basis_hermite(max_degree)
         self.a = solution.a.T.tolist()
         self.c = solution.c.T.tolist()
         self.minX = [X.min(axis=0).getA1() for X in solution.X_]
