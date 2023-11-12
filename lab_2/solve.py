@@ -5,7 +5,7 @@ from scipy import special
 from openpyxl import Workbook
 from tabulate import tabulate as tb
 
-def conjugate_gradient_method(A, b, eps):
+def coordinate_descent_method(A, b, eps):
     n = len(A.T) # number column
     xi1 = xi = np.zeros(shape=(n,1), dtype = float)
     vi = ri = b # start condition
@@ -54,7 +54,7 @@ class Solve(object):
         if type == 'lsq':
             return np.linalg.lstsq(A,b)[0]
         elif type == 'cjg':
-            return conjugate_gradient_method(A.T*A, A.T*b, self.eps)
+            return coordinate_descent_method(A.T*A, A.T*b, self.eps)
 
     def norm_data(self):
         '''
@@ -249,7 +249,7 @@ class Solve(object):
     def built_c(self):
         self.c = np.ndarray(shape = (len(self.X),0),dtype = float)
         for i in range(self.deg[3]):
-            self.c = np.append(self.c, conjugate_gradient_method(self.Fi[i].T*self.Fi[i], self.Fi[i].T*self.Y[:,i],self.eps),\
+            self.c = np.append(self.c, coordinate_descent_method(self.Fi[i].T*self.Fi[i], self.Fi[i].T*self.Y[:,i],self.eps),\
                           axis = 1)
 
     def built_F(self):
